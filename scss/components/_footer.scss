@@ -2,7 +2,27 @@ footer{
     background-image: linear-gradient(90deg, $body-one, $boston-blue);
     text-align: center;
     p{
-
-        font-size: 300
+        margin: 10px auto;
+        font-size: 300;
+        span{
+            font-size:25px;
+            transform: scale(.5, 1);
+        }
     }
+}
+
+.footer__group-icons{
+    margin: 10px auto auto auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.footer__icon1:hover, 
+.footer__icon2:hover, 
+.footer__icon3:hover, 
+.footer__icon4:hover{
+    fill: $white;
+    transition: 1s;
 }

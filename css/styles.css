@@ -429,6 +429,10 @@ img {
       justify-content: space-around; }
       .card-back .group-icons svg {
         fill: #fff; }
+      .card-back .group-icons .icon-one svg:hover,
+      .card-back .group-icons .icon-two svg:hover {
+        fill: #000000;
+        transition: 0.5s; }
     .card-back button {
       margin: 20px;
       height: 40px;
@@ -447,6 +451,23 @@ footer {
   background-image: linear-gradient(90deg, #00ffc8, #4da2bb);
   text-align: center; }
   footer p {
+    margin: 10px auto;
     font-size: 300; }
+    footer p span {
+      font-size: 25px;
+      transform: scale(0.5, 1); }
+
+.footer__group-icons {
+  margin: 10px auto auto auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.footer__icon1:hover,
+.footer__icon2:hover,
+.footer__icon3:hover,
+.footer__icon4:hover {
+  fill: #fff;
+  transition: 1s; }
 
 /*# sourceMappingURL=styles.css.map */

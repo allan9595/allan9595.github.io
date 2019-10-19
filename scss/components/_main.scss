@@ -76,6 +76,13 @@ img{
             svg{
                 fill: $white;
             }
+            .icon-one,
+            .icon-two{
+                svg:hover{
+                    fill: $black;
+                    transition: 0.5s;
+                }
+            }
         }
         button{
            margin: 20px;
