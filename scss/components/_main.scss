@@ -20,24 +20,78 @@
     
 }
 
+img{
+    width: 256px;
+    height: 170px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.project:hover .card{
+    transform: rotateY(180deg);
+}
+
 .project{
-    width: 80%;
+    width: 256px;
+    height: auto;
     margin: 30px auto;
-    perspective: 600px;
-    .card{
-        position: relative;
-        transition: transform 1s;
-        transform-style: preserve-3d;
-        img{
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
+    perspective: 1000px;
+    background-color: transparent;
+    
+    //3d effect credits to https://www.w3schools.com/howto/howto_css_flip_image.asp
+}
+      
+.card{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width: 256px;
+    height: 170px;
+    text-align: center;
+
+    &-front, &-back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        backface-visibility: hidden;
+    }
+
+    &-front{
+        background-color: #bbb;
+        color: black;
+    }
+
+    &-back{
+        background-image: linear-gradient(to right, $froly, $coral, $froly);
+        transform: rotateY(180deg);
+        font-size: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .group-icons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            svg{
+                fill: $white;
+            }
+        }
+        button{
+           margin: 20px;
+           height: 40px;
+           background-image: linear-gradient(to right, $maya-blue, $turquoise-blue,$body-one);
+           border-radius: 10px;
+           border: 1px solid $maya-blue;
+        }
+        p{
+            color: $white;
         }
     }
-    
+     
 }
-    
 hr{
-    color: $black;
+    background-color: $froly;
     width: 90%;
+    height: 2px;
 }

@@ -384,22 +384,64 @@ nav {
     color: #fff;
     padding: 15px; }
 
+img {
+  width: 256px;
+  height: 170px;
+  border-radius: 10px;
+  margin: auto; }
+
+.project:hover .card {
+  transform: rotateY(180deg); }
+
 .project {
-  width: 80%;
+  width: 256px;
+  height: auto;
   margin: 30px auto;
-  perspective: 600px; }
-  .project .card {
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d; }
-    .project .card img {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px; }
+  perspective: 1000px;
+  background-color: transparent; }
+
+.card {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 256px;
+  height: 170px;
+  text-align: center; }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden; }
+  .card-front {
+    background-color: #bbb;
+    color: black; }
+  .card-back {
+    background-image: linear-gradient(to right, #e4757a, #fd7856, #e4757a);
+    transform: rotateY(180deg);
+    font-size: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .card-back .group-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .card-back .group-icons svg {
+        fill: #fff; }
+    .card-back button {
+      margin: 20px;
+      height: 40px;
+      background-image: linear-gradient(to right, #51ddfc, #80e8d1, #00ffc8);
+      border-radius: 10px;
+      border: 1px solid #51ddfc; }
+    .card-back p {
+      color: #fff; }
 
 hr {
-  color: #000000;
-  width: 90%; }
+  background-color: #e4757a;
+  width: 90%;
+  height: 2px; }
 
 footer {
   background-image: linear-gradient(90deg, #00ffc8, #4da2bb);
