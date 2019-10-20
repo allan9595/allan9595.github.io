@@ -382,7 +382,8 @@ nav {
     width: 80%;
     margin: auto;
     color: #fff;
-    padding: 15px; }
+    padding: 0 5px;
+    border-left: 3px solid #fd7856; }
 
 img {
   width: 256px;
@@ -446,6 +447,59 @@ hr {
   background-color: #e4757a;
   width: 90%;
   height: 2px; }
+
+.model {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  /* Sit on top */
+  overflow: auto; }
+
+/* Modal Content */
+.model-content {
+  position: relative;
+  width: 80%;
+  max-width: 370px;
+  max-height: 430px;
+  margin: 30px auto;
+  padding-bottom: 15px;
+  background: #00ffcd;
+  border-radius: 0.25em;
+  border: 1px solid rgba(100, 100, 100, 0.2);
+  transition: .4s ease-out;
+  font-size: 13px; }
+  .model-content .btn-close {
+    float: right;
+    background: #e4757a;
+    color: #fff; }
+  .model-content .btn-forward-back {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .model-content .btn-forward-back .previous, .model-content .btn-forward-back .forward {
+      background: #e4757a;
+      border-radius: 0.25em;
+      border: 1px solid #00ffcd;
+      padding: 5px 10px;
+      color: #fff; }
+  .model-content .project-technologies, .model-content .project-description {
+    width: 95%;
+    margin: auto; }
+  .model-content hr {
+    width: 90%;
+    color: #000000; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
 
 footer {
   background-image: linear-gradient(90deg, #00ffc8, #4da2bb);
