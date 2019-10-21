@@ -1,3 +1,7 @@
+main{
+    margin: 40px auto auto auto;
+}
+
 .introduction{
     height: 600px;
     width: 90%;
@@ -102,4 +106,48 @@ hr{
     background-color: $froly;
     width: 90%;
     height: 2px;
+}
+
+
+//768px desktop view
+@include media-query($desktop-view){
+    main{
+        margin: 60px auto auto auto;
+    }
+    
+    .introduction{
+        height: 400px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+}
+
+
+//768px desktop view
+@include media-query($big-desktop-view){
+   main{
+       max-width: 1024px;
+   }
+
+   .introduction{
+        height: 400px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
 }

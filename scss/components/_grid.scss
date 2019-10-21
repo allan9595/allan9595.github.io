@@ -28,27 +28,27 @@ footer{
     grid-template-rows: auto;
 }
 
-//768px desktop view
-@include media-query($desktop-view){
-    .container{
-        grid-template-areas: 
-            'nav header'
-            'nav main'
-            'nav footer'
-        ;
-        grid-template-columns: 200px 1fr;
-    }
-}
+// //768px desktop view
+// @include media-query($desktop-view){
+//     .container{
+//         grid-template-areas: 
+//             'nav header'
+//             'nav main'
+//             'nav footer'
+//         ;
+//         grid-template-columns: 100px 1fr;
+//     }
+// }
 
 
-//768px desktop view
-@include media-query($big-desktop-view){
-    .container{
-        grid-template-areas: 
-            'nav header'
-            'nav main'
-            'nav footer'
-        ;
-        grid-template-columns: 500px 1fr;
-    }
-}
+// //768px desktop view
+// @include media-query($big-desktop-view){
+//     .container{
+//         grid-template-areas: 
+//             'nav header'
+//             'nav main'
+//             'nav footer'
+//         ;
+//         grid-template-columns: 500px 1fr;
+//     }
+// }

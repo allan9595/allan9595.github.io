@@ -331,41 +331,101 @@ footer {
   grid-template-areas: "header" "nav" "main" "footer";
   grid-template-rows: auto; }
 
-@media (min-width: 768px) {
-  .container {
-    grid-template-areas: "nav header" "nav main" "nav footer";
-    grid-template-columns: 200px 1fr; } }
-@media (min-width: 1024px) {
-  .container {
-    grid-template-areas: "nav header" "nav main" "nav footer";
-    grid-template-columns: 500px 1fr; } }
-header {
-  background-image: linear-gradient(to bottom right, #000000, #000000, #000000, #4da2bb, #00ffc8); }
-  header h1 {
+.__header-info {
+  background-image: linear-gradient(to bottom right, #000000, #000000, #000000, #4da2bb, #00ffc8);
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .__header-info .menu-open {
+    fill: #fff;
+    margin: -12px 0 0 0;
+    height: 20px;
+    width: 24px; }
+  .__header-info .menu-close {
+    display: none;
+    fill: #fff;
+    margin: -12px 0 0 0;
+    height: 20px;
+    width: 24px; }
+  .__header-info h1 {
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
     color: white;
     font-size: 500; }
 
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 20px; }
-  nav a {
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff; }
+  width: 100%;
+  display: none; }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-image: linear-gradient(to right, #e4757a, #fd7856, #e4757a);
+    height: 200px;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 40px 0; }
+    nav ul li {
+      padding: 22px 0; }
+      nav ul li a {
+        width: 100%;
+        margin: auto;
+        color: #fff;
+        font-size: 20px; }
+    nav ul li:hover {
+      background-image: linear-gradient(to right, #24d4d4, #00ffc8, #24d4d4); }
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1; }
 
 @media (min-width: 768px) {
+  #container {
+    transition: margin-left 1s; }
+
   nav {
-    display: none; } }
+    display: block; }
+    nav ul {
+      display: block;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 50px;
+      margin: unset; }
+      nav ul li a {
+        top: 100;
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        display: block;
+        transition: 0.3s; }
+
+  .menu-close-sidebar {
+    position: absolute;
+    top: 100;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; } }
+main {
+  margin: 40px auto auto auto; }
+
 .introduction {
   height: 600px;
   width: 90%;
@@ -448,6 +508,36 @@ hr {
   width: 90%;
   height: 2px; }
 
+@media (min-width: 768px) {
+  main {
+    margin: 60px auto auto auto; }
+
+  .introduction {
+    height: 400px;
+    width: 80%;
+    margin: auto; }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px; } }
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px; }
+
+  .introduction {
+    height: 400px;
+    width: 80%;
+    margin: auto; }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px; } }
 .model {
   display: none;
   position: fixed;
@@ -505,7 +595,7 @@ footer {
   background-image: linear-gradient(90deg, #00ffc8, #4da2bb);
   text-align: center; }
   footer p {
-    margin: 10px auto;
+    margin: 20px 0 30px 0;
     font-size: 300; }
     footer p span {
       font-size: 25px;
@@ -523,5 +613,12 @@ footer {
 .footer__icon4:hover {
   fill: #fff;
   transition: 1s; }
+
+@media (min-width: 768px) {
+  .footer__group-icons {
+    max-width: 768px; } }
+@media (min-width: 1024px) {
+  .footer__group-icons {
+    max-width: 768px; } }
 
 /*# sourceMappingURL=styles.css.map */
