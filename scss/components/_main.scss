@@ -50,7 +50,6 @@ img{
 .card{
     position: relative;
     transition: transform 0.8s;
-    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     width: 256px;
     height: 170px;
@@ -63,9 +62,6 @@ img{
         border-radius: 10px;
         backface-visibility: hidden;
         -webkit-backface-visibility:hidden;
-        -moz-backface-visibility:hidden;
-        -ms-backface-visibility:hidden;
-        -o-backface-visibility:hidden;
     }
 
     &-front{
