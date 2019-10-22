@@ -466,7 +466,7 @@ img {
 .card {
   position: relative;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   width: 256px;
   height: 170px;
   text-align: center; }
@@ -475,7 +475,8 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; }
   .card-front {
     background-color: #bbb;
     color: black; }
