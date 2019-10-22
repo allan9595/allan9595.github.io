@@ -58,9 +58,9 @@ if($(window).width() < 768){
     };
 
     // Get the header
-    var header = document.getElementById("header");
+    const header = document.getElementById("header");
     // Get the offset position of the navbar
-    var sticky = header.offsetTop;
+    const sticky = header.offsetTop;
 
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     const createSticky = () => {
@@ -90,17 +90,22 @@ if($(window).width() >= 768){
             </svg>
             `
         )
+
+        $('.menu-close-sidebar').click(() => {
+            document.getElementById("navbar__inner").style.width = "0px";
+            document.getElementById("container").style.marginLeft = "0px";
+        })
     })
 
-      // When the user scrolls the page, execute myFunction
-      window.onscroll = () =>  {
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = () =>  {
         createSticky()
     };
 
     // Get the header
-    var header = document.getElementById("header");
+    const header = document.getElementById("header");
     // Get the offset position of the navbar
-    var sticky = header.offsetTop;
+    const sticky = header.offsetTop;
 
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
     const createSticky = () => {
@@ -111,5 +116,17 @@ if($(window).width() >= 768){
         }
     }
 }
+
+
+//give linkes the scroll animation, credits to https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
+
+//Smooth scrolling with links
+$('a[href*=\\#]').on('click', function(event){     
+    event.preventDefault();
+    $('html,body').animate(
+        {
+            scrollTop:$(this.hash).offset().top
+        }, 500);
+});
 
 

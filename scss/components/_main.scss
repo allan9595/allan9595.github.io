@@ -3,6 +3,7 @@ main{
 }
 
 .introduction{
+    overflow: auto;
     height: 600px;
     width: 90%;
     margin: auto;
@@ -17,7 +18,7 @@ main{
     }
     p{
         width: 80%;
-        margin: auto;
+        margin: 20px auto;
         color: $white;
         padding: 0 5px;
         border-left: 3px solid $coral;
