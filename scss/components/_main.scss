@@ -72,7 +72,6 @@ img{
     &-back{
         background-image: linear-gradient(to right, $froly, $coral, $froly);
         transform: rotateY(180deg);
-        font-size: 300;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

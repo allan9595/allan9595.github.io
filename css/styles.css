@@ -351,8 +351,7 @@ footer {
     width: 35px; }
   .__header-info h1 {
     margin: 20px auto;
-    width: 80%;
-    font-size: 500; }
+    width: 80%; }
     .__header-info h1 a {
       color: white; }
 
@@ -410,7 +409,7 @@ nav {
       padding-top: 50px;
       margin: unset; }
       nav ul li a {
-        top: 100;
+        top: 100px;
         padding: 8px 8px 8px 20px;
         text-decoration: none;
         font-size: 25px;
@@ -483,7 +482,6 @@ img {
   .card-back {
     background-image: linear-gradient(to right, #e4757a, #fd7856, #e4757a);
     transform: rotateY(180deg);
-    font-size: 300;
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
@@ -606,8 +604,7 @@ footer {
   background-image: linear-gradient(90deg, #00ffc8, #4da2bb);
   text-align: center; }
   footer p {
-    margin: 20px 0 30px 0;
-    font-size: 300; }
+    margin: 20px 0 30px 0; }
     footer p span {
       font-size: 25px;
       transform: scale(0.5, 1); }
