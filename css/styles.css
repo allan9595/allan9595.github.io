@@ -341,14 +341,14 @@ footer {
   .__header-info .menu-open {
     fill: #fff;
     margin: -12px 0 0 0;
-    height: 20px;
-    width: 24px; }
+    height: 35px;
+    width: 35px; }
   .__header-info .menu-close {
     display: none;
     fill: #fff;
     margin: -12px 0 0 0;
-    height: 20px;
-    width: 24px; }
+    height: 35px;
+    width: 35px; }
   .__header-info h1 {
     margin: 20px auto;
     width: 80%;
