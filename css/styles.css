@@ -361,6 +361,9 @@ footer {
   top: 0;
   width: 100%; }
 
+.projects h2 {
+  display: none; }
+
 nav {
   width: 100%;
   display: none; }
